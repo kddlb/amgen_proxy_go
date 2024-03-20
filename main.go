@@ -56,7 +56,7 @@ func searchHandler(c *gin.Context) {
 		c.AbortWithError(http.StatusInternalServerError, err)
 		return
 	}
-	c.Data(http.StatusOK, "application/json", jsonData)
+	c.Data(http.StatusOK, "application/json; charset=utf-8", jsonData)
 }
 
 func songsHandler(c *gin.Context) {
@@ -72,7 +72,7 @@ func songsHandler(c *gin.Context) {
 		c.AbortWithError(http.StatusInternalServerError, err)
 		return
 	}
-	c.Data(http.StatusOK, "application/json", jsonData)
+	c.Data(http.StatusOK, "application/json; charset=utf-8", jsonData)
 }
 
 func getHandler(c *gin.Context) {
